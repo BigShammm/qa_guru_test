@@ -19,5 +19,5 @@ def test_google_search():
 
 def test_google_search_not_found():
     browser.open('https://www.google.ru/')
-    browser.element('#APjFqb').should(be.blank).type('fefefeffefe').press_enter()
-    browser.element('#appbar').should(have.text('Результатов fefefeffefe не найдено '))
+    browser.element('#APjFqb').should(be.blank).type('jhfgjkfdjgkdfgfd').press_enter()
+    browser.element('#appbar').should(have.text('Результатов jhfgjkfdjgkdfgfd не найдено '))
