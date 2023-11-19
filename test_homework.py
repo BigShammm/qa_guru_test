@@ -11,7 +11,7 @@ def browser_configs():
     browser.quit()
 
 
-def test_google_search():
+def test_google_search(browser_configs):
     browser.open('https://www.google.ru/')
     browser.element('#APjFqb').should(be.blank).type('yashaka/selen').press_enter()
     browser.element('#search').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
@@ -19,5 +19,5 @@ def test_google_search():
 
 def test_google_search_not_found():
     browser.open('https://www.google.ru/')
-    browser.element('#APjFqb').should(be.blank).type('jhfgjkfdjgkdfgfd').press_enter()
-    browser.element('#appbar').should(have.text('Результатов jhfgjkfdjgkdfgfd не найдено '))
+    browser.element('#APjFqb').should(be.blank).type('poiuytrtyuiop[sfdsvmkkjkfdfsd').press_enter()
+    browser.element('#appbar').should(have.text('Результатов примерно 0'))
